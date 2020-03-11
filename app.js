@@ -16,4 +16,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/party', partyRoutes);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`API app listening on port ${port}!`));
