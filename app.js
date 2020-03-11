@@ -12,7 +12,7 @@ mongoose.connect(mongoUrl, {
   useFindAndModify: false,
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser());
 
 app.use('/party', partyRoutes);
 
