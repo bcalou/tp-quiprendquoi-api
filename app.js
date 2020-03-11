@@ -4,8 +4,9 @@ const port = 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const partyRoutes = require('./routes/party');
+const mongoUrl = require('./mongo.js');
 
-mongoose.connect('mongodb://localhost/qpq', {
+mongoose.connect(mongoUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
