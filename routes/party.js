@@ -6,7 +6,7 @@ router.post('/', (req, res) => {
   return new Party(req.body)
     .save()
     .then((party) => res.send(party))
-    .catch((err) => res.send(err));
+    .catch((err) => res.status(400).send(err));
 });
 
 router.get('/:id', (req, res) => {
