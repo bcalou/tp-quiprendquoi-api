@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const partyRoutes = require('./routes/party');
@@ -13,6 +13,15 @@ mongoose.connect(mongoUrl, {
 });
 
 app.use(bodyParser());
+
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept',
+  );
+  next();
+});
 
 app.use('/party', partyRoutes);
 
