@@ -1,12 +1,11 @@
-const partySchema = require('../models/party');
+const Party = require('../models/party');
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 
-const Party = mongoose.model('Party', partySchema);
-
 router.post('/', (req, res) => {
   return new Party(req.body)
+    .save()
     .then((party) => res.send(party))
     .catch((err) => res.status(400).send(err));
 });

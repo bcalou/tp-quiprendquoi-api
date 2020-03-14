@@ -8,4 +8,4 @@ const partySchema = new mongoose.Schema({
   items: [itemSchema],
 });
 
-module.exports = partySchema;
+module.exports = mongoose.model('Party', partySchema);
