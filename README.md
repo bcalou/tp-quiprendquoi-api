@@ -11,7 +11,7 @@ POST /party
 Paramètres :
   - name: String (required)
   - author: String (required)
-  - date: DD-MM-YYYY ou DD-MM-YYYYTHH:mm:ssZ
+  - date: YYYY-MM-DD ou YYYY-MM-DDTHH:mm:ssZ
 ```
 
 Exemple de retour :
@@ -53,7 +53,7 @@ PATCH /party/5e6e64f217f65f0d0d4b21ab
 Paramètres :
   - name: String
   - author: String
-  - date: DD-MM-YYYY ou DD-MM-YYYYTHH:mm:ssZ
+  - date: YYYY-MM-DD ou YYYY-MM-DDTHH:mm:ssZ
 ```
 
 Exemple de retour :
@@ -97,8 +97,7 @@ Récupérer l'id de l'élément en faisant un `GET` sur l'événement correspond
 PATCH /party/5e6e64f217f65f0d0d4b21ab/items/5e6e695817f65f0d0d4b21b1
 Paramètres :
   - name: String
-  - author: String
-  - date: DD-MM-YYYY ou DD-MM-YYYYTHH:mm:ssZ
+  - user: String
 ```
 
 Le premier id est celui de l'événement, le second celui de l'élément.
